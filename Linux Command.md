@@ -50,19 +50,19 @@ In Linux, everything is treated as a file — even hardware devices like hard dr
 5. **Linux Access Modes**  
 Linux has two main modes:
 ###
-A. User Mode (non-root)**  
+5.1. User Mode (non-root)**  
 - **Used for:** Daily activities.
 - **Limitations:** Cannot modify core system files.  
 - **Prompt symbol:** `$`
-Example:
+- Example:  
 ```bash
 user@hostname:~$
 ```
-B. Root Mode (superuser)  
+5.2. Root Mode (superuser)  
 - Used for: Full control of the system.  
 - Privileges: Can modify or delete any files, including core system files.  
 - Prompt symbol: `#`  
-Example:
+- Example:  
 ```bash
 root@hostname:~#
 ```
@@ -128,7 +128,7 @@ Used to search for files or text inside files.
 | `grep -r` | Search text in a folder recursively.  | `grep -r "password" /etc/`  |
 
 > 💡 **If `locate` is not installed:**
-- ```bash
+ ```bash
   sudo apt install mlocate
   sudo updatedb
   ```
