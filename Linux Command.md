@@ -23,16 +23,12 @@ Each distro has different package management systems and purposes.
 | **Security-focused** | Kali Linux, Parrot OS             | Designed for hacking, penetration testing, and digital forensics. |
 | **Lightweight**      | Lubuntu, Puppy Linux              | Best for computers with low specifications. |
 
----
-
 ### 🔹 Recommendations for Beginners:
 - **Ubuntu Desktop** → User-friendly and easy to learn.  
 - **Ubuntu Server** → Great for learning networking and server management.
 
 4. **Linux has a standard file system hierarchy, which is different from Windows.**  
 In Linux, everything is treated as a file — even hardware devices like hard drives and network cards.
-
----
 
 ### **Main Directory Structure**
 
