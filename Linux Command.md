@@ -2,10 +2,11 @@
 How To know about Linux
 
 1. What Linux is?
+###
 Linux is an `operating system` (OS) built on the `Linux kernel.` It is `open-source` and free to use.
 ---
 
-3. Where can Linux be used?
+2. Where can Linux be used?
 
 - Servers (web servers, database servers, etc.) → Examples: Ubuntu Server, CentOS, Debian.
 - Desktop computers → Examples: Ubuntu Desktop, Linux Mint, Fedora.
@@ -27,6 +28,7 @@ Each distro has different package management systems and purposes.
 ### 🔹 Recommendations for Beginners:
 - **Ubuntu Desktop** → User-friendly and easy to learn.  
 - **Ubuntu Server** → Great for learning networking and server management.
+---
 
 4. **Linux has a standard file system hierarchy, which is different from Windows.**  
 In Linux, everything is treated as a file — even hardware devices like hard drives and network cards.
@@ -44,7 +46,5 @@ In Linux, everything is treated as a file — even hardware devices like hard dr
 | `/tmp`     | Temporary files. |
 | `/dev`     | Devices such as hard drives (`/dev/sda`), USB, etc. |
 
----
-
 > 💡 **Tip:** In Linux, **everything is treated as a file**, including devices like hard drives and network cards.
-
+---
