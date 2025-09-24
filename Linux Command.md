@@ -91,7 +91,7 @@ sudo yum install tree    # CentOS/Red Hat
 ```
 ###
 
-B. File & Folder Management  
+6.2. File & Folder Management  
 Used to create, copy, move, or delete files and folders.  
 | Command   | Function                          | Example                     |
 |-----------|-----------------------------------|-----------------------------|
@@ -106,7 +106,7 @@ Used to create, copy, move, or delete files and folders.
 | `rm -rf`  | **Force delete** without confirmation ⚠ **Dangerous!** | `rm -rf /important` |
 ###
 
-C. Viewing & Reading Files   
+6.3. Viewing & Reading Files   
 Used to read file contents without editing them.   
 | Command      | Function                          | Example                     |
 |--------------|-----------------------------------|-----------------------------|
@@ -118,7 +118,7 @@ Used to read file contents without editing them.
 | `tail -f`    | Follow a log in real-time.        | `tail -f /var/log/syslog`   |
 ###
 
-D. Searching Files & Content  
+6.4. Searching Files & Content  
 Used to search for files or text inside files.  
 | Command   | Function                              | Example                     |
 |-----------|---------------------------------------|-----------------------------|
@@ -127,14 +127,14 @@ Used to search for files or text inside files.
 | `grep`    | Search for text inside a file.        | `grep "error" log.txt`      |
 | `grep -r` | Search text in a folder recursively.  | `grep -r "password" /etc/`  |
 
->💡 **If `locate` is not installed:**
+> 💡 **If `locate` is not installed:**
 ```bash
 sudo apt install mlocate
 sudo updatedb
 ```
 ###
 
-E. User & Group Management  
+6.5. User & Group Management  
 Manage users, passwords, and groups.  
 | Command        | Function                     | Example                     |
 |----------------|------------------------------|-----------------------------|
@@ -147,7 +147,7 @@ Manage users, passwords, and groups.
 | `usermod -aG`  | Add a user to a group.       | `sudo usermod -aG sudo username` |
 ###
 
-F. Permissions & Ownership  
+6.6. Permissions & Ownership  
 File permissions:  
 r = `Read`  
 w = `Write`  
@@ -169,7 +169,7 @@ Example:
 ```
 ###
 
-G. System & Process Monitoring  
+6.7. System & Process Monitoring  
 Monitor CPU, RAM, processes, and running services.  
 | Command     | Function                              | Example               |
 |-------------|---------------------------------------|-----------------------|
@@ -183,7 +183,7 @@ Monitor CPU, RAM, processes, and running services.
 | `du -sh`    | Show folder size.                      | `du -sh /var/log`     |
 | `uptime`    | Show system uptime.                    | `uptime`              |
 
->💡 **Note:**  
+> 💡 **Note:**  
 - Install `htop` if it's not available:
   ```bash
   sudo apt install htop    # Debian/Ubuntu
@@ -191,7 +191,7 @@ Monitor CPU, RAM, processes, and running services.
   ```
 ###
 
-H. Networking  
+6.8. Networking  
 Essential commands for network engineers and troubleshooting.  
 | Command        | Function                          | Example                       |
 |----------------|-----------------------------------|-------------------------------|
@@ -205,7 +205,7 @@ Essential commands for network engineers and troubleshooting.
 | `nslookup`     | Check DNS records.                | `nslookup google.com`           |
 | `dig`          | More detailed DNS lookup.         | `dig google.com`                |  
 
->💡 **Note:**  
+> 💡 **Note:**  
 - Install `traceroute` if it's not available:
   ```bash
   sudo apt install traceroute    # Debian/Ubuntu
@@ -213,7 +213,7 @@ Essential commands for network engineers and troubleshooting.
   ```
 ###
 
-I. Software Management (Package Managers)  
+6.9. Software Management (Package Managers)  
 Different Linux distributions use different package managers.  
 ### Debian/Ubuntu (`apt`):  
 ```bash
@@ -221,9 +221,24 @@ sudo apt update        # Update package list
 sudo apt upgrade       # Upgrade installed software
 sudo apt install nginx # Install software
 sudo apt remove nginx  # Remove software
+```  
+Red Hat/CentOS (yum/dnf):  
+```bash
+sudo yum update        # Update software
+sudo yum install nginx # Install software
+sudo yum remove nginx  # Remove software
+```  
+> 💡 Note:  
+On modern Red Hat-based systems, `dnf` is the replacement for `yum.`  
+Example:  
+```bash
+sudo dnf install nginx
 ```
 
-J. Compression & Archiving
+
+###
+
+6.10. Compression & Archiving
 Command	Function	Example
 tar -cvf	Create tar archive.	tar -cvf backup.tar folder/
 tar -xvf	Extract tar archive.	tar -xvf backup.tar
@@ -231,7 +246,7 @@ tar -czvf	Create compressed tar.gz file.	tar -czvf backup.tar.gz folder/
 tar -xzvf	Extract tar.gz file.	tar -xzvf backup.tar.gz
 zip	Create zip file.	zip backup.zip file.txt
 unzip	Extract zip file.	unzip backup.zip
-K. System Information
+6.11. System Information
 Command	Function	Example
 uname -a	Show Linux kernel info.	uname -a
 hostname	Show device hostname.	hostname
