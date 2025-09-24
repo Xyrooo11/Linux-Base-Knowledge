@@ -49,7 +49,7 @@ In Linux, everything is treated as a file — even hardware devices like hard dr
 
 5. **Linux Access Modes**  
 Linux has two main modes:
-  1. User Mode (non-root)**  
+ A. User Mode (non-root)**  
   - **Used for:** Daily activities.  
   - **Limitations:** Cannot modify core system files.  
   - **Prompt symbol:** `$`
