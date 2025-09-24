@@ -216,21 +216,21 @@ Essential commands for network engineers and troubleshooting.
 6.9. Software Management (Package Managers)  
 Different Linux distributions use different package managers.  
 Debian/Ubuntu (`apt`):  
-```bash
-sudo apt update        # Update package list
-sudo apt upgrade       # Upgrade installed software
-sudo apt install nginx # Install software
-sudo apt remove nginx  # Remove software
-```  
+  ```bash
+  sudo apt update        # Update package list
+  sudo apt upgrade       # Upgrade installed software
+  sudo apt install nginx # Install software
+  sudo apt remove nginx  # Remove software
+  ```  
 Red Hat/CentOS (yum/dnf):  
-```bash
-sudo yum update        # Update software
-sudo yum install nginx # Install software
-sudo yum remove nginx  # Remove software
-```  
+  ```bash
+  sudo yum update        # Update software
+  sudo yum install nginx # Install software
+  sudo yum remove nginx  # Remove software
+  ```  
 > 💡 Note:  
 On modern Red Hat-based systems, `dnf` is the replacement for `yum.`  
-Example:  
+- Example:  
   ```bash
   sudo dnf install nginx
   ```
@@ -272,7 +272,7 @@ Check hardware and OS details.
   ```bash
   lscpu
   ```
-To check memory details:
+- To check memory details:
   ```bash
   free -h
   ```
