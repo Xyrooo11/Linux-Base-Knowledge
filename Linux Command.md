@@ -135,7 +135,7 @@ Used to search for files or text inside files.
 ###
 
 6.5. User & Group Management  
-- Manage users, passwords, and groups.  
+Manage users, passwords, and groups.  
 | Command        | Function                     | Example                     |
 |----------------|------------------------------|-----------------------------|
 | `whoami`       | Show current username.       | `whoami`                    |
