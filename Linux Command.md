@@ -128,14 +128,14 @@ Used to search for files or text inside files.
 | `grep -r` | Search text in a folder recursively.  | `grep -r "password" /etc/`  |
 
 > 💡 **If `locate` is not installed:**
-```bash
-sudo apt install mlocate
-sudo updatedb
-```
+- ```bash
+  sudo apt install mlocate
+  sudo updatedb
+  ```
 ###
 
 6.5. User & Group Management  
-Manage users, passwords, and groups.  
+- Manage users, passwords, and groups.  
 | Command        | Function                     | Example                     |
 |----------------|------------------------------|-----------------------------|
 | `whoami`       | Show current username.       | `whoami`                    |
@@ -158,7 +158,7 @@ x = `Execute`
 |chmod	    |Change permissions.	    |chmod 755 script.sh|
 |chown	    |Change file ownership.	  |chown root:root script.sh|
 |umask	    |Show default permissions.|	umask|  
-Example:  
+- Example:  
 ```bash
 -rwxr-xr-x
 | ||| || |
@@ -215,14 +215,14 @@ Essential commands for network engineers and troubleshooting.
 
 6.9. Software Management (Package Managers)  
 Different Linux distributions use different package managers.  
-Debian/Ubuntu (`apt`):  
+- Debian/Ubuntu (`apt`):  
   ```bash
   sudo apt update        # Update package list
   sudo apt upgrade       # Upgrade installed software
   sudo apt install nginx # Install software
   sudo apt remove nginx  # Remove software
   ```  
-Red Hat/CentOS (yum/dnf):  
+- Red Hat/CentOS (yum/dnf):  
   ```bash
   sudo yum update        # Update software
   sudo yum install nginx # Install software
