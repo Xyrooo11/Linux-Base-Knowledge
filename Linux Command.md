@@ -84,33 +84,40 @@ Used to move around and view folders.
 |cd ~	        |Go to user’s home directory.	        |cd ~|
 |tree	        |Show folder structure as a tree.	    |tree /etc|
 
-💡 If tree is not installed:
-
+> 💡 If tree is not installed:
+```bash
 sudo apt install tree    # Debian/Ubuntu
 sudo yum install tree    # CentOS/Red Hat
+```
+###
 
-2. File & Folder Management
+B. ## File & Folder Management  
+Used to create, copy, move, or delete files and folders.  
+| Command   | Function                          | Example                     |
+|-----------|-----------------------------------|-----------------------------|
+| `touch`   | Create an empty file.            | `touch file.txt`            |
+| `mkdir`   | Create a new folder.             | `mkdir data`                |
+| `mkdir -p`| Create nested folders.           | `mkdir -p project/app/logs` |
+| `cp`      | Copy a file.                      | `cp file.txt backup.txt`    |
+| `cp -r`   | Copy a folder and its contents.   | `cp -r /data /backup`       |
+| `mv`      | Move or rename a file.            | `mv file.txt /home/user/`   |
+| `rm`      | Delete a file.                    | `rm file.txt`               |
+| `rm -r`   | Delete a folder and its contents. | `rm -r folder/`             |
+| `rm -rf`  | **Force delete** without confirmation ⚠ **Dangerous!** | `rm -rf /important` |
+###
 
-For creating, copying, moving, or deleting files.
+C. ## Viewing & Reading Files   
+Used to read file contents without editing them.   
+| Command      | Function                          | Example                     |
+|--------------|-----------------------------------|-----------------------------|
+| `cat`        | Show file contents directly.      | `cat file.txt`              |
+| `less`       | View file contents page by page.  | `less file.txt`             |
+| `head`       | Show the first 10 lines.          | `head file.txt`             |
+| `head -n 20` | Show the first 20 lines.          | `head -n 20 file.txt`       |
+| `tail`       | Show the last 10 lines.           | `tail file.txt`             |
+| `tail -f`    | Follow a log in real-time.        | `tail -f /var/log/syslog`   |
+###
 
-Command	Function	Example
-touch	Create an empty file.	touch file.txt
-mkdir	Create a new folder.	mkdir data
-mkdir -p	Create nested folders.	mkdir -p project/app/logs
-cp	Copy a file.	cp file.txt backup.txt
-cp -r	Copy a folder with contents.	cp -r /data /backup
-mv	Move or rename a file.	mv file.txt /home/user/
-rm	Delete a file.	rm file.txt
-rm -r	Delete a folder with contents.	rm -r folder/
-rm -rf	Force delete without confirmation. ⚠ Dangerous!	rm -rf /important
-3. Viewing & Reading Files
-Command	Function	Example
-cat	Show file contents.	cat file.txt
-less	View file page by page.	less file.txt
-head	Show first 10 lines.	head file.txt
-head -n 20	Show first 20 lines.	head -n 20 file.txt
-tail	Show last 10 lines.	tail file.txt
-tail -f	Follow log in real-time.	tail -f /var/log/syslog
 4. Searching Files & Content
 Command	Function	Example
 find	Search for files by name/location.	find / -name file.txt
