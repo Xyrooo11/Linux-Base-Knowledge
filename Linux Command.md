@@ -215,7 +215,7 @@ Essential commands for network engineers and troubleshooting.
 
 6.9. Software Management (Package Managers)  
 Different Linux distributions use different package managers.  
-### Debian/Ubuntu (`apt`):  
+Debian/Ubuntu (`apt`):  
 ```bash
 sudo apt update        # Update package list
 sudo apt upgrade       # Upgrade installed software
@@ -231,30 +231,52 @@ sudo yum remove nginx  # Remove software
 > 💡 Note:  
 On modern Red Hat-based systems, `dnf` is the replacement for `yum.`  
 Example:  
-```bash
-sudo dnf install nginx
-```
-
-
+  ```bash
+  sudo dnf install nginx
+  ```
 ###
 
-6.10. Compression & Archiving
-Command	Function	Example
-tar -cvf	Create tar archive.	tar -cvf backup.tar folder/
-tar -xvf	Extract tar archive.	tar -xvf backup.tar
-tar -czvf	Create compressed tar.gz file.	tar -czvf backup.tar.gz folder/
-tar -xzvf	Extract tar.gz file.	tar -xzvf backup.tar.gz
-zip	Create zip file.	zip backup.zip file.txt
-unzip	Extract zip file.	unzip backup.zip
-6.11. System Information
-Command	Function	Example
-uname -a	Show Linux kernel info.	uname -a
-hostname	Show device hostname.	hostname
-uptime	Show uptime.	uptime
-lsblk	List storage devices.	lsblk
-df -h	Show disk usage.	df -h
-du -sh	Show folder size.	du -sh /home
-L. Help & Documentation
+6.10. Compression & Archiving  
+Used to compress or extract files.  
+| Command       | Function                         | Example                       |
+|---------------|----------------------------------|-------------------------------|
+| `tar -cvf`    | Create a tar archive.           | `tar -cvf backup.tar folder/` |
+| `tar -xvf`    | Extract a tar archive.          | `tar -xvf backup.tar`         |
+| `tar -czvf`   | Create a compressed tar.gz archive. | `tar -czvf backup.tar.gz folder/` |
+| `tar -xzvf`   | Extract a tar.gz archive.       | `tar -xzvf backup.tar.gz`     |
+| `zip`         | Create a zip file.              | `zip backup.zip file.txt`     |
+| `unzip`       | Extract a zip file.             | `unzip backup.zip`            |  
+> 💡 **Pro Tips:**  
+- `tar` is commonly used for Linux backups and packaging multiple files.  
+- Add `-v` (verbose) to see which files are being processed.
+- For zip with multiple files:  
+  ```bash
+  zip backup.zip file1.txt file2.txt file3.txt
+  ```
+###
+
+6.11. System Information  
+Check hardware and OS details.  
+| Command     | Function                              | Example          |
+|-------------|---------------------------------------|------------------|
+| `uname -a`  | Show Linux kernel info.               | `uname -a`       |
+| `hostname`  | Show device hostname.                 | `hostname`       |
+| `uptime`    | Show how long the system has been running. | `uptime`     |
+| `lsblk`     | List storage devices.                 | `lsblk`          |
+| `df -h`     | Show disk usage.                      | `df -h`          |
+| `du -sh`    | Show folder size.                     | `du -sh /home`   |  
+> 💡 **Pro Tips:**  
+- Use `lsblk -f` to view filesystems and mount points.
+- Combine `df -h` and `du -sh` to monitor storage health.
+- To view CPU details:
+  ```bash
+  lscpu
+  ```
+To check memory details:
+  ```bash
+  free -h
+  ```
+6.12. Help & Documentation
 Command	Function	Example
 man <command>	Manual page for a command.	man ls
 <command> --help	Quick help.	ls --help
