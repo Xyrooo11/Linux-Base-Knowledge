@@ -65,3 +65,159 @@ B. Root Mode (superuser)
 Example:
 ```bash
 root@hostname:~#
+```
+###
+
+6. **Basic Commands You Should Master**  
+Essential Linux Commands to Master  
+Here are the most important commands, grouped by their functions:  
+
+A. File System Navigation  
+Used to move around and view folders.  
+|**Command**  |**Function**                         |**Example**  |
+|-------------|-------------------------------------|-------------|
+|pwd	        |Show current directory.	            |pwd|
+|ls	          |List folder contents.	              |ls -l (detailed view)|
+|ls -a        |Show all files including hidden (.).	|ls -a|
+|cd	          |Change directory.	                  |cd /home|
+|cd ..	      |Go up one level.	                    |cd ..|
+|cd ~	        |Go to user’s home directory.	        |cd ~|
+|tree	        |Show folder structure as a tree.	    |tree /etc|
+
+💡 If tree is not installed:
+
+sudo apt install tree    # Debian/Ubuntu
+sudo yum install tree    # CentOS/Red Hat
+
+2. File & Folder Management
+
+For creating, copying, moving, or deleting files.
+
+Command	Function	Example
+touch	Create an empty file.	touch file.txt
+mkdir	Create a new folder.	mkdir data
+mkdir -p	Create nested folders.	mkdir -p project/app/logs
+cp	Copy a file.	cp file.txt backup.txt
+cp -r	Copy a folder with contents.	cp -r /data /backup
+mv	Move or rename a file.	mv file.txt /home/user/
+rm	Delete a file.	rm file.txt
+rm -r	Delete a folder with contents.	rm -r folder/
+rm -rf	Force delete without confirmation. ⚠ Dangerous!	rm -rf /important
+3. Viewing & Reading Files
+Command	Function	Example
+cat	Show file contents.	cat file.txt
+less	View file page by page.	less file.txt
+head	Show first 10 lines.	head file.txt
+head -n 20	Show first 20 lines.	head -n 20 file.txt
+tail	Show last 10 lines.	tail file.txt
+tail -f	Follow log in real-time.	tail -f /var/log/syslog
+4. Searching Files & Content
+Command	Function	Example
+find	Search for files by name/location.	find / -name file.txt
+locate	Search files using a database (faster).	locate nginx.conf
+grep	Search text inside a file.	grep "error" log.txt
+grep -r	Search text inside a folder recursively.	grep -r "password" /etc/
+
+💡 If locate is not installed:
+
+sudo apt install mlocate
+sudo updatedb
+
+5. User & Group Management
+Command	Function	Example
+whoami	Show current username.	whoami
+id	Show user and group details.	id
+adduser	Create a new user.	sudo adduser username
+passwd	Change user password.	passwd username
+deluser	Delete a user.	sudo deluser username
+groups	Show groups of a user.	groups
+usermod -aG	Add user to a group.	sudo usermod -aG sudo username
+6. Permissions & Ownership
+
+File permissions:
+r = `Read`
+w = `Write`
+x = `Execute`
+
+Command	Function	Example
+ls -l	Show file permissions.	ls -l
+chmod	Change permissions.	chmod 755 script.sh
+chown	Change file ownership.	chown root:root script.sh
+umask	Show default permissions.	umask
+
+Example:
+```bash
+-rwxr-xr-x
+| ||| || |
+| ||| || └─ Others
+| ||| └─── Group
+| ||└───── Owner
+| └─────── File type (-=file, d=directory)
+```
+7. System & Process Monitoring
+Command	Function	Example
+top	Real-time process viewer.	top
+htop	Interactive process viewer (install first).	htop
+ps aux	Show all processes.	ps aux
+kill	Kill process by PID.	kill 1234
+killall	Kill processes by name.	killall nginx
+free -h	Show RAM usage.	free -h
+df -h	Show disk usage.	df -h
+du -sh	Show folder size.	du -sh /var/log
+uptime	Show system uptime.	uptime
+8. Networking
+Command	Function	Example
+ip a	Show IP addresses and interfaces.	ip a
+ping	Check connectivity.	ping google.com
+traceroute	Trace route to a host.	traceroute google.com
+netstat -tulnp	Show active ports/services.	netstat -tulnp
+ss -tulnp	Modern version of netstat.	ss -tulnp
+curl	Test HTTP/HTTPS requests.	curl http://example.com
+wget	Download files.	wget http://example.com/file.zip
+nslookup	Check DNS records.	nslookup google.com
+dig	Detailed DNS lookup.	dig google.com
+9. Software Management (Package Manager)
+
+Debian/Ubuntu (APT):
+
+sudo apt update
+sudo apt upgrade
+sudo apt install nginx
+sudo apt remove nginx
+
+
+Red Hat/CentOS (YUM/DNF):
+
+sudo yum update
+sudo yum install nginx
+sudo yum remove nginx
+
+10. Compression & Archiving
+Command	Function	Example
+tar -cvf	Create tar archive.	tar -cvf backup.tar folder/
+tar -xvf	Extract tar archive.	tar -xvf backup.tar
+tar -czvf	Create compressed tar.gz file.	tar -czvf backup.tar.gz folder/
+tar -xzvf	Extract tar.gz file.	tar -xzvf backup.tar.gz
+zip	Create zip file.	zip backup.zip file.txt
+unzip	Extract zip file.	unzip backup.zip
+11. System Information
+Command	Function	Example
+uname -a	Show Linux kernel info.	uname -a
+hostname	Show device hostname.	hostname
+uptime	Show uptime.	uptime
+lsblk	List storage devices.	lsblk
+df -h	Show disk usage.	df -h
+du -sh	Show folder size.	du -sh /home
+12. Help & Documentation
+Command	Function	Example
+man <command>	Manual page for a command.	man ls
+<command> --help	Quick help.	ls --help
+whatis	Short description of command.	whatis ls
+apropos	Search commands by keyword.	apropos network
+13. Useful Terminal Shortcuts
+Shortcut	Function
+Ctrl + C	Cancel running command.
+Ctrl + D	Exit terminal or shell.
+Ctrl + L	Clear screen (same as clear).
+↑ / ↓	Scroll through command history.
+Tab	Auto-complete file/folder names.
