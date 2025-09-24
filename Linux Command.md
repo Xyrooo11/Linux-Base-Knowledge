@@ -91,7 +91,7 @@ sudo yum install tree    # CentOS/Red Hat
 ```
 ###
 
-B. ## File & Folder Management  
+B. File & Folder Management  
 Used to create, copy, move, or delete files and folders.  
 | Command   | Function                          | Example                     |
 |-----------|-----------------------------------|-----------------------------|
@@ -106,7 +106,7 @@ Used to create, copy, move, or delete files and folders.
 | `rm -rf`  | **Force delete** without confirmation ⚠ **Dangerous!** | `rm -rf /important` |
 ###
 
-C. ## Viewing & Reading Files   
+C. Viewing & Reading Files   
 Used to read file contents without editing them.   
 | Command      | Function                          | Example                     |
 |--------------|-----------------------------------|-----------------------------|
@@ -118,41 +118,47 @@ Used to read file contents without editing them.
 | `tail -f`    | Follow a log in real-time.        | `tail -f /var/log/syslog`   |
 ###
 
-4. Searching Files & Content
-Command	Function	Example
-find	Search for files by name/location.	find / -name file.txt
-locate	Search files using a database (faster).	locate nginx.conf
-grep	Search text inside a file.	grep "error" log.txt
-grep -r	Search text inside a folder recursively.	grep -r "password" /etc/
+D. ## Searching Files & Content  
+Used to search for files or text inside files.  
+| Command   | Function                              | Example                     |
+|-----------|---------------------------------------|-----------------------------|
+| `find`    | Search for files by name/location.    | `find / -name file.txt`     |
+| `locate`  | Search files using a database (faster). | `locate nginx.conf`         |
+| `grep`    | Search for text inside a file.        | `grep "error" log.txt`      |
+| `grep -r` | Search text in a folder recursively.  | `grep -r "password" /etc/`  |
 
-💡 If locate is not installed:
-
+>💡 **If `locate` is not installed:**
+```bash
 sudo apt install mlocate
 sudo updatedb
+```
+###
 
-5. User & Group Management
-Command	Function	Example
-whoami	Show current username.	whoami
-id	Show user and group details.	id
-adduser	Create a new user.	sudo adduser username
-passwd	Change user password.	passwd username
-deluser	Delete a user.	sudo deluser username
-groups	Show groups of a user.	groups
-usermod -aG	Add user to a group.	sudo usermod -aG sudo username
-6. Permissions & Ownership
+E. User & Group Management  
+Manage users, passwords, and groups.  
+| Command        | Function                     | Example                     |
+|----------------|------------------------------|-----------------------------|
+| `whoami`       | Show current username.       | `whoami`                    |
+| `id`           | Show user and group details. | `id`                         |
+| `adduser`      | Create a new user.           | `sudo adduser username`      |
+| `passwd`       | Change a user’s password.    | `passwd username`            |
+| `deluser`      | Delete a user.               | `sudo deluser username`      |
+| `groups`       | Show groups of a user.       | `groups`                      |
+| `usermod -aG`  | Add a user to a group.       | `sudo usermod -aG sudo username` |
+###
 
-File permissions:
-r = `Read`
-w = `Write`
-x = `Execute`
-
-Command	Function	Example
-ls -l	Show file permissions.	ls -l
-chmod	Change permissions.	chmod 755 script.sh
-chown	Change file ownership.	chown root:root script.sh
-umask	Show default permissions.	umask
-
-Example:
+F. Permissions & Ownership  
+File permissions:  
+r = `Read`  
+w = `Write`  
+x = `Execute`  
+|**Command**|**Function**	            |**Example**|
+|-----------|-------------------------|-----------|
+|ls -l	    |Show file permissions.   |	ls -l|
+|chmod	    |Change permissions.	    |chmod 755 script.sh|
+|chown	    |Change file ownership.	  |chown root:root script.sh|
+|umask	    |Show default permissions.|	umask|
+Example:  
 ```bash
 -rwxr-xr-x
 | ||| || |
@@ -161,17 +167,30 @@ Example:
 | ||└───── Owner
 | └─────── File type (-=file, d=directory)
 ```
-7. System & Process Monitoring
-Command	Function	Example
-top	Real-time process viewer.	top
-htop	Interactive process viewer (install first).	htop
-ps aux	Show all processes.	ps aux
-kill	Kill process by PID.	kill 1234
-killall	Kill processes by name.	killall nginx
-free -h	Show RAM usage.	free -h
-df -h	Show disk usage.	df -h
-du -sh	Show folder size.	du -sh /var/log
-uptime	Show system uptime.	uptime
+###
+
+G. System & Process Monitoring  
+Monitor CPU, RAM, processes, and running services.  
+| Command     | Function                              | Example               |
+|-------------|---------------------------------------|-----------------------|
+| `top`       | Show running processes in real-time.  | `top`                 |
+| `htop`      | Interactive version of `top` (install first). | `htop`        |
+| `ps aux`    | Show all processes.                   | `ps aux`              |
+| `kill`      | Kill a process by PID.                | `kill 1234`           |
+| `killall`   | Kill all processes by name.           | `killall nginx`       |
+| `free -h`   | Show memory usage.                     | `free -h`             |
+| `df -h`     | Show disk usage.                       | `df -h`               |
+| `du -sh`    | Show folder size.                      | `du -sh /var/log`     |
+| `uptime`    | Show system uptime.                    | `uptime`              |
+
+>💡 **Note:**  
+- Install `htop` if it's not available:
+  ```bash
+  sudo apt install htop    # Debian/Ubuntu
+  sudo yum install htop    # CentOS/Red Hat
+  ```
+###
+
 8. Networking
 Command	Function	Example
 ip a	Show IP addresses and interfaces.	ip a
