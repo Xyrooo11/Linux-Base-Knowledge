@@ -57,10 +57,10 @@ Example:
 ```bash
 user@hostname:~$
 ```
-B. Root Mode (superuser)  
-Used for: Full control of the system.  
-Privileges: Can modify or delete any files, including core system files.  
-Prompt symbol: #  
-Example:
-```bash
-root@hostname:~#
+  B. Root Mode (superuser)  
+  Used for: Full control of the system.  
+  Privileges: Can modify or delete any files, including core system files.  
+  Prompt symbol: #  
+  Example:
+  ```bash
+  root@hostname:~#
