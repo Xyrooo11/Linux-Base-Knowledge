@@ -72,7 +72,7 @@ root@hostname:~#
 Essential Linux Commands to Master  
 Here are the most important commands, grouped by their functions:  
 
-A. File System Navigation  
+6.1. File System Navigation  
 Used to move around and view folders.  
 |**Command**  |**Function**                         |**Example**  |
 |-------------|-------------------------------------|-------------|
@@ -118,7 +118,7 @@ Used to read file contents without editing them.
 | `tail -f`    | Follow a log in real-time.        | `tail -f /var/log/syslog`   |
 ###
 
-D. ## Searching Files & Content  
+D. Searching Files & Content  
 Used to search for files or text inside files.  
 | Command   | Function                              | Example                     |
 |-----------|---------------------------------------|-----------------------------|
@@ -157,7 +157,7 @@ x = `Execute`
 |ls -l	    |Show file permissions.   |	ls -l|
 |chmod	    |Change permissions.	    |chmod 755 script.sh|
 |chown	    |Change file ownership.	  |chown root:root script.sh|
-|umask	    |Show default permissions.|	umask|
+|umask	    |Show default permissions.|	umask|  
 Example:  
 ```bash
 -rwxr-xr-x
@@ -191,34 +191,39 @@ Monitor CPU, RAM, processes, and running services.
   ```
 ###
 
-8. Networking
-Command	Function	Example
-ip a	Show IP addresses and interfaces.	ip a
-ping	Check connectivity.	ping google.com
-traceroute	Trace route to a host.	traceroute google.com
-netstat -tulnp	Show active ports/services.	netstat -tulnp
-ss -tulnp	Modern version of netstat.	ss -tulnp
-curl	Test HTTP/HTTPS requests.	curl http://example.com
-wget	Download files.	wget http://example.com/file.zip
-nslookup	Check DNS records.	nslookup google.com
-dig	Detailed DNS lookup.	dig google.com
-9. Software Management (Package Manager)
+H. Networking  
+Essential commands for network engineers and troubleshooting.  
+| Command        | Function                          | Example                       |
+|----------------|-----------------------------------|-------------------------------|
+| `ip a`         | Show IP addresses and interfaces. | `ip a`                         |
+| `ping`         | Test connectivity to another host.| `ping google.com`              |
+| `traceroute`   | Trace the path to a host.         | `traceroute google.com`        |
+| `netstat -tulnp` | Show active ports and services.  | `netstat -tulnp`               |
+| `ss -tulnp`    | Modern replacement for netstat.   | `ss -tulnp`                     |
+| `curl`         | Test HTTP/HTTPS connection.       | `curl http://example.com`      |
+| `wget`         | Download files from the internet. | `wget http://example.com/file.zip` |
+| `nslookup`     | Check DNS records.                | `nslookup google.com`           |
+| `dig`          | More detailed DNS lookup.         | `dig google.com`                |  
 
-Debian/Ubuntu (APT):
+>💡 **Note:**  
+- Install `traceroute` if it's not available:
+  ```bash
+  sudo apt install traceroute    # Debian/Ubuntu
+  sudo yum install traceroute    # CentOS/Red Hat
+  ```
+###
 
-sudo apt update
-sudo apt upgrade
-sudo apt install nginx
-sudo apt remove nginx
+I. Software Management (Package Managers)  
+Different Linux distributions use different package managers.  
+### Debian/Ubuntu (`apt`):  
+```bash
+sudo apt update        # Update package list
+sudo apt upgrade       # Upgrade installed software
+sudo apt install nginx # Install software
+sudo apt remove nginx  # Remove software
+```
 
-
-Red Hat/CentOS (YUM/DNF):
-
-sudo yum update
-sudo yum install nginx
-sudo yum remove nginx
-
-10. Compression & Archiving
+J. Compression & Archiving
 Command	Function	Example
 tar -cvf	Create tar archive.	tar -cvf backup.tar folder/
 tar -xvf	Extract tar archive.	tar -xvf backup.tar
@@ -226,7 +231,7 @@ tar -czvf	Create compressed tar.gz file.	tar -czvf backup.tar.gz folder/
 tar -xzvf	Extract tar.gz file.	tar -xzvf backup.tar.gz
 zip	Create zip file.	zip backup.zip file.txt
 unzip	Extract zip file.	unzip backup.zip
-11. System Information
+K. System Information
 Command	Function	Example
 uname -a	Show Linux kernel info.	uname -a
 hostname	Show device hostname.	hostname
@@ -234,13 +239,13 @@ uptime	Show uptime.	uptime
 lsblk	List storage devices.	lsblk
 df -h	Show disk usage.	df -h
 du -sh	Show folder size.	du -sh /home
-12. Help & Documentation
+L. Help & Documentation
 Command	Function	Example
 man <command>	Manual page for a command.	man ls
 <command> --help	Quick help.	ls --help
 whatis	Short description of command.	whatis ls
 apropos	Search commands by keyword.	apropos network
-13. Useful Terminal Shortcuts
+M. Useful Terminal Shortcuts
 Shortcut	Function
 Ctrl + C	Cancel running command.
 Ctrl + D	Exit terminal or shell.
