@@ -321,3 +321,17 @@ Every command has built-in help.
   ```bash
   Ctrl + Q
   ```
+###
+
+7. Tips for Learning Linux  
+- Use a Virtual Machine like VirtualBox to practice safely without risking your main system.
+- Recommended beginner-friendly distros: Ubuntu Server or Debian.
+- Get used to working through the terminal instead of relying on the GUI.  
+Always read command documentation using:  
+ ``` bash
+ man <command>
+ ```  
+Example:  
+ ```bash
+ man ls
+ ```
