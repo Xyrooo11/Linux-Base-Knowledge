@@ -28,3 +28,26 @@ Each distro has different package management systems and purposes.
 ### 🔹 Recommendations for Beginners:
 - **Ubuntu Desktop** → User-friendly and easy to learn.  
 - **Ubuntu Server** → Great for learning networking and server management.
+
+4. **Linux has a standard file system hierarchy, which is different from Windows.**  
+In Linux, everything is treated as a file — even hardware devices like hard drives and network cards.
+
+---
+
+### **Main Directory Structure**
+
+| **Folder** | **Function** |
+|------------|--------------|
+| `/`        | Root directory (the top level). |
+| `/home`    | Personal folder for each user. |
+| `/etc`     | System configuration files. |
+| `/bin`     | Core programs/commands such as `ls`, `cp`, `mv`. |
+| `/var`     | Logs, cache, and variable files. |
+| `/usr`     | Additional programs and libraries. |
+| `/tmp`     | Temporary files. |
+| `/dev`     | Devices such as hard drives (`/dev/sda`), USB, etc. |
+
+---
+
+> 💡 **Tip:** In Linux, **everything is treated as a file**, including devices like hard drives and network cards.
+
