@@ -11,3 +11,21 @@ Linux is an `operating system` (OS) built on the `Linux kernel.` It is `open-sou
 - Desktop computers → Examples: Ubuntu Desktop, Linux Mint, Fedora.
 - Embedded devices → Examples: routers, IoT devices, Android.
 - Supercomputers & Cloud → Most cloud platforms like AWS, Google Cloud, and Azure run on Linux.
+
+3. Linux has many variants called distributions (distros)
+4. **Linux has many variants called distributions (distros).**  
+Each distro has different package management systems and purposes.
+
+| **Category**         | **Example Distros**               | **Description** |
+|----------------------|-----------------------------------|-----------------|
+| **Debian-based**     | Ubuntu, Linux Mint, Kali Linux    | Easy to use, large community, package manager: **APT**. |
+| **Red Hat-based**    | CentOS, Fedora, Rocky Linux       | Commonly used for enterprises and servers, package manager: **YUM** or **DNF**. |
+| **Arch-based**       | Arch Linux, Manjaro               | For advanced users, highly customizable. |
+| **Security-focused** | Kali Linux, Parrot OS             | Designed for hacking, penetration testing, and digital forensics. |
+| **Lightweight**      | Lubuntu, Puppy Linux              | Best for computers with low specifications. |
+
+---
+
+### 🔹 Recommendations for Beginners:
+- **Ubuntu Desktop** → User-friendly and easy to learn.  
+- **Ubuntu Server** → Great for learning networking and server management.
