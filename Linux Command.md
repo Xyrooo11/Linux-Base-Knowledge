@@ -1,10 +1,10 @@
 # Linux-Base-Knowledge
 
-1. # **What Linux is?**  
+1.  **What Linux is?**  
 Linux is an `operating system` (OS) built on the `Linux kernel.` It is `open-source` and free to use.
 ###
 
-2. # **Where can Linux be used?**
+2.  **Where can Linux be used?**
 
 - Servers (web servers, database servers, etc.) → Examples: Ubuntu Server, CentOS, Debian.
 - Desktop computers → Examples: Ubuntu Desktop, Linux Mint, Fedora.
@@ -12,7 +12,7 @@ Linux is an `operating system` (OS) built on the `Linux kernel.` It is `open-sou
 - Supercomputers & Cloud → Most cloud platforms like AWS, Google Cloud, and Azure run on Linux.
 ###
 
-3. # **Linux has many variants called distributions (distros).**  
+3.  **Linux has many variants called distributions (distros).**  
 Each distro has different package management systems and purposes.
 
 | **Category**         | **Example Distros**               | **Description** |
@@ -28,7 +28,7 @@ Each distro has different package management systems and purposes.
 - **Ubuntu Server** → Great for learning networking and server management.
 ###
 
-4. # **Linux has a standard file system hierarchy, which is different from Windows.**  
+4.  **Linux has a standard file system hierarchy, which is different from Windows.**  
 In Linux, everything is treated as a file — even hardware devices like hard drives and network cards.
 
 ### **Main Directory Structure**
@@ -47,4 +47,14 @@ In Linux, everything is treated as a file — even hardware devices like hard dr
 > 💡 **Tip:** In Linux, **everything is treated as a file**, including devices like hard drives and network cards.
 ###
 
-5. 
+5. **Linux Access Modes**
+
+Linux has two main modes:
+  1. User Mode (non-root)**  
+  - **Used for:** Daily activities.  
+  - **Limitations:** Cannot modify core system files.  
+  - **Prompt symbol:** `$`
+Example:
+```bash
+user@hostname:~$
+
