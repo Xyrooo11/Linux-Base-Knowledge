@@ -76,13 +76,13 @@ Here are the most important commands, grouped by their functions:
 Used to move around and view folders.  
 |**Command**  |**Function**                         |**Example**  |
 |-------------|-------------------------------------|-------------|
-|pwd	        |Show current directory.	            |pwd|
-|ls	          |List folder contents.	              |ls -l (detailed view)|
-|ls -a        |Show all files including hidden (.).	|ls -a|
-|cd	          |Change directory.	                  |cd /home|
-|cd ..	      |Go up one level.	                    |cd ..|
-|cd ~	        |Go to user’s home directory.	        |cd ~|
-|tree	        |Show folder structure as a tree.	    |tree /etc|
+|`pwd`	       |Show current directory.	            |pwd|
+|`ls`	        |List folder contents.	              |ls -l (detailed view)|
+|`ls -a`      |Show all files including hidden (.).	|ls -a|
+|`cd`	        |Change directory.	                  |cd /home|
+|`cd ..`      |Go up one level.	                    |cd ..|
+|`cd ~`	      |Go to user’s home directory.	        |cd ~|
+|`tree`	      |Show folder structure as a tree.	    |tree /etc|
 
 > 💡 If tree is not installed:
 ```bash
@@ -98,6 +98,7 @@ Used to create, copy, move, or delete files and folders.
 | `touch`   | Create an empty file.            | `touch file.txt`            |
 | `mkdir`   | Create a new folder.             | `mkdir data`                |
 | `mkdir -p`| Create nested folders.           | `mkdir -p project/app/logs` |
+|`nano/vim` | Edit File on terminal            | `nano file.txt`              |
 | `cp`      | Copy a file.                      | `cp file.txt backup.txt`    |
 | `cp -r`   | Copy a folder and its contents.   | `cp -r /data /backup`       |
 | `mv`      | Move or rename a file.            | `mv file.txt /home/user/`   |
@@ -154,10 +155,10 @@ w = `Write`
 x = `Execute`  
 |**Command**|**Function**	            |**Example**|
 |-----------|-------------------------|-----------|
-|ls -l	    |Show file permissions.   |	ls -l|
-|chmod	    |Change permissions.	    |chmod 755 script.sh|
-|chown	    |Change file ownership.	  |chown root:root script.sh|
-|umask	    |Show default permissions.|	umask|  
+|`ls -l`    |Show file permissions.   |	ls -l|
+|`chmod`	   |Change permissions.	    |chmod 755 script.sh|
+|`chown`    |Change file ownership.	  |chown root:root script.sh|
+|`umask`    |Show default permissions.|	umask|  
 - Example:
 ```bash
 -rwxr-xr-x
@@ -178,16 +179,25 @@ Monitor CPU, RAM, processes, and running services.
 | `ps aux`    | Show all processes.                   | `ps aux`              |
 | `kill`      | Kill a process by PID.                | `kill 1234`           |
 | `killall`   | Kill all processes by name.           | `killall nginx`       |
-| `free -h`   | Show memory usage.                     | `free -h`             |
-| `df -h`     | Show disk usage.                       | `df -h`               |
-| `du -sh`    | Show folder size.                      | `du -sh /var/log`     |
-| `uptime`    | Show system uptime.                    | `uptime`              |
-
+| `free -h`   | Show memory usage.                    | `free -h`             |
+| `df -h`     | Show disk usage.                      | `df -h`               |
+| `du -sh`    | Show folder size.                     | `du -sh /var/log`     |
+| `uptime`    | Show system uptime.                   | `uptime`              |
+|`shutdown`   | Shutdown system instantly             | `sudo shutdown now`   |
+|`reboot`     | Reboot system instantly               | `sudo reboot`         |
 > 💡 **Note:**  
 - Install `htop` if it's not available:
   ```bash
   sudo apt install htop    # Debian/Ubuntu
   sudo yum install htop    # CentOS/Red Hat
+  ```
+- Check if any shutdown/reboot schedule avail
+  ```bash
+  who -r
+  ```
+  or message system
+  ```bash
+  last -x | grep shutdown
   ```
 ###
 
@@ -286,7 +296,7 @@ Every command has built-in help.
 | `<command> --help` | Show quick help.                   | `ls --help`   |
 | `whatis`        | Show a short description of a command.| `whatis ls`   |
 | `apropos`       | Search for commands by keyword.       | `apropos network` |  
-💡 **Tips:**
+> 💡 **Tips:**
 - Use the **`man`** command to read detailed documentation. Press:
   - `Space` → Next page  
   - `q` → Quit manual  
@@ -299,11 +309,11 @@ Every command has built-in help.
 6.13. Useful Terminal Shortcuts  
 | Shortcut    | Function                        |
 |-------------|---------------------------------|
-| **Ctrl + C** | Cancel a running command.       |
-| **Ctrl + D** | Log out / exit shell.           |
-| **Ctrl + L** | Clear the screen (`clear`).     |
-| **↑ / ↓**    | Navigate through command history.|
-| **Tab**      | Auto-complete filenames/folders.|  
+| `Ctrl + C`  | Cancel a running command.       |
+| `Ctrl + D`  | Log out / exit shell.           |
+| `Ctrl + L`  | Clear the screen (`clear`).     |
+| `↑ / ↓`     | Navigate through command history.|
+| `Tab`       | Auto-complete filenames/folders.|  
 > 💡 **Tips:**
 - Press `Tab` twice to see **all available commands** or file suggestions.
 - Combine `Ctrl + L` with `clear` to refresh your workspace for better visibility.
