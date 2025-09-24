@@ -12,8 +12,7 @@ Linux is an `operating system` (OS) built on the `Linux kernel.` It is `open-sou
 - Embedded devices → Examples: routers, IoT devices, Android.
 - Supercomputers & Cloud → Most cloud platforms like AWS, Google Cloud, and Azure run on Linux.
 
-3. Linux has many variants called distributions (distros)
-4. **Linux has many variants called distributions (distros).**  
+3. **Linux has many variants called distributions (distros).**  
 Each distro has different package management systems and purposes.
 
 | **Category**         | **Example Distros**               | **Description** |
