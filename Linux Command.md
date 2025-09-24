@@ -1,4 +1,4 @@
-# Linux-Base-Knowledge
+ # Linux-Base-Knowledge
 
 1.  **What Linux is?**  
 Linux is an `operating system` (OS) built on the `Linux kernel.` It is `open-source` and free to use.
@@ -158,7 +158,7 @@ x = `Execute`
 |chmod	    |Change permissions.	    |chmod 755 script.sh|
 |chown	    |Change file ownership.	  |chown root:root script.sh|
 |umask	    |Show default permissions.|	umask|  
-- Example:  
+- Example:
 ```bash
 -rwxr-xr-x
 | ||| || |
@@ -276,16 +276,38 @@ Check hardware and OS details.
   ```bash
   free -h
   ```
-6.12. Help & Documentation
-Command	Function	Example
-man <command>	Manual page for a command.	man ls
-<command> --help	Quick help.	ls --help
-whatis	Short description of command.	whatis ls
-apropos	Search commands by keyword.	apropos network
-M. Useful Terminal Shortcuts
-Shortcut	Function
-Ctrl + C	Cancel running command.
-Ctrl + D	Exit terminal or shell.
-Ctrl + L	Clear screen (same as clear).
-↑ / ↓	Scroll through command history.
-Tab	Auto-complete file/folder names.
+###
+
+6.12. Help & Documentation  
+Every command has built-in help.  
+| Command         | Function                              | Example       |
+|-----------------|---------------------------------------|---------------|
+| `man <command>` | Open manual page for a command.       | `man ls`      |
+| `<command> --help` | Show quick help.                   | `ls --help`   |
+| `whatis`        | Show a short description of a command.| `whatis ls`   |
+| `apropos`       | Search for commands by keyword.       | `apropos network` |  
+💡 **Tips:**
+- Use the **`man`** command to read detailed documentation. Press:
+  - `Space` → Next page  
+  - `q` → Quit manual  
+- Example:
+  ```bash
+  man grep
+  ```
+###
+
+6.13. Useful Terminal Shortcuts  
+| Shortcut    | Function                        |
+|-------------|---------------------------------|
+| **Ctrl + C** | Cancel a running command.       |
+| **Ctrl + D** | Log out / exit shell.           |
+| **Ctrl + L** | Clear the screen (`clear`).     |
+| **↑ / ↓**    | Navigate through command history.|
+| **Tab**      | Auto-complete filenames/folders.|  
+> 💡 **Tips:**
+- Press `Tab` twice to see **all available commands** or file suggestions.
+- Combine `Ctrl + L` with `clear` to refresh your workspace for better visibility.
+- If you accidentally freeze your terminal, try:
+  ```bash
+  Ctrl + Q
+  ```
