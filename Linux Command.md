@@ -95,10 +95,10 @@ sudo yum install tree    # CentOS/Red Hat
 Used to create, copy, move, or delete files and folders.  
 | Command   | Function                          | Example                     |
 |-----------|-----------------------------------|-----------------------------|
-| `touch`   | Create an empty file.            | `touch file.txt`            |
-| `mkdir`   | Create a new folder.             | `mkdir data`                |
-| `mkdir -p`| Create nested folders.           | `mkdir -p project/app/logs` |
-|`nano/vim` | Edit File on terminal            | `nano file.txt`              |
+| `touch`   | Create an empty file.             | `touch file.txt`            |
+| `mkdir`   | Create a new folder.              | `mkdir data`                |
+| `mkdir -p`| Create nested folders.            | `mkdir -p project/app/logs` |
+|`nano/vim` | Edit File on terminal             | `nano file.txt`             |
 | `cp`      | Copy a file.                      | `cp file.txt backup.txt`    |
 | `cp -r`   | Copy a folder and its contents.   | `cp -r /data /backup`       |
 | `mv`      | Move or rename a file.            | `mv file.txt /home/user/`   |
