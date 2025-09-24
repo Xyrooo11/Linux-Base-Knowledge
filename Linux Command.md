@@ -1,6 +1,6 @@
 # Linux-Base-Knowledge
 
-1. **What Linux is?** 
+1. **What Linux is?**  
 Linux is an `operating system` (OS) built on the `Linux kernel.` It is `open-source` and free to use.
 ---
 
